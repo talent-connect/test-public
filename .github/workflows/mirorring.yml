@@ -12,6 +12,6 @@ jobs:
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url:
-            git@github.com:talent-connect/test-private.git
+            ${{ secrets.SYNC_REPOSITORY_TARGET_URL }}
           ssh_private_key:                              # <-- use 'secrets' to pass credential information.
-            ${{ secrets.DEPLOY_TOKEN_WRITE_TO_PRIVATE }}
+            ${{ secrets.SYNC_REPOSITORY_DEPLOY_TOKEN }}
